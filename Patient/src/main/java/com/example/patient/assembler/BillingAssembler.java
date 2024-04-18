@@ -9,7 +9,7 @@ public class BillingAssembler {
 
     public Billing apply(Patient patient) {
         return Billing.builder()
-                .sku(patient.getSku())
+                .patientId(patient.getPatientId())
                 .BillingName(patient.getBillingName())
                 .BillingAmount(patient.getBillingAmount())
                 .build();

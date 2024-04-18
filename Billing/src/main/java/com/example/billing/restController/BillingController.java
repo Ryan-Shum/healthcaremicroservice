@@ -22,8 +22,8 @@ public class BillingController {
         return "Billing is added Successfully !!";
     }
 
-    @GetMapping("/billing/{sku}")
-    public Billing getBillingBySku(@PathVariable String sku){
-        return billingService.getBilling(sku);
+    @GetMapping("/billing/{patientId}")
+    public Billing getBillingBySku(@PathVariable String patientId){
+        return billingService.getBilling(patientId);
     }
 }
