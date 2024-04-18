@@ -1,21 +1,26 @@
 package com.example.patient.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Patient {
+@Builder
+public class Appointment {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String patientId;
-    private String name;
-    private String email;
-    private String billingName;
-    private int billingAmount;
     private String patientName;
     private String appointmentDateTime;
-    private String recordType;
+
 }

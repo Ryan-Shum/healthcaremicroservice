@@ -9,17 +9,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Billing {
+public class Records {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String patientId;
-    private String BillingName;
-    private int BillingAmount;
+    private String name;
+    private String recordType;
+
 }

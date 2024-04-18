@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BillingRepository extends JpaRepository<Billing,Integer> {
 
-    Billing findBySku(String sku);
+    Billing findByPatientId(String patientId);
 }

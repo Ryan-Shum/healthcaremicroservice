@@ -23,9 +23,9 @@ public class BillingService {
         this.billingAssembler = billingAssembler;
     }
 
-    public void addRecord(String sku){
+    public void addRecord(String patientId){
 
-        Patient patient = patientClient.getBillingInformation(sku);
+        Patient patient = patientClient.getBillingInformation(patientId);
 
         if(!Objects.isNull(patient))      {
             billingRepository.save(billingAssembler.apply(patient))  ;

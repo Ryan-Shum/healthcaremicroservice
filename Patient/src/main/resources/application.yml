@@ -1,6 +1,12 @@
 
 patientAdaptor:
-  url: http://localhost:8081/billing/{sku}
+  url: http://localhost:8081/billing/{patientId}
+
+appointmentAdaptor:
+  url: http://localhost:8082/appointment/{patientId}
+
+recordsAdaptor:
+  url: http://localhost:8083/record/{patientId}
 
 spring:
   datasource:

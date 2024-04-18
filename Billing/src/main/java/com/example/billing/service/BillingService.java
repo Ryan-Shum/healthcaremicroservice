@@ -17,7 +17,7 @@ public class BillingService {
         billingRepository.save(billing);
     }
 
-    public Billing getBilling(String sku) {
-       return billingRepository.findBySku(sku);
+    public Billing getBilling(String patientId) {
+       return billingRepository.findByPatientId(patientId);
     }
 }

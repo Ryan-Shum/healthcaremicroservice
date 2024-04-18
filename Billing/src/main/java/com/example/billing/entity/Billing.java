@@ -17,7 +17,7 @@ public class Billing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String sku;
+    private String patientId;
     private String BillingName;
     private int BillingAmount;
 }
