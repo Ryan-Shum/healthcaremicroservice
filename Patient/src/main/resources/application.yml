@@ -1,0 +1,14 @@
+
+patientAdaptor:
+  url: http://localhost:8081/billing/{sku}
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/patient
+    username: root
+    password: hello123
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
