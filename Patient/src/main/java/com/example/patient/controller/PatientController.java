@@ -3,6 +3,7 @@ package com.example.patient.controller;
 import com.example.patient.service.AppointmentService;
 import com.example.patient.service.BillingService;
 import com.example.patient.service.RecordsService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,11 @@ public class PatientController {
         this.billingService = billingService;
         this.appointmentService = appointmentService;
         this.recordsService = recordsService;
+    }
+
+    @GetMapping("/")
+    public String showHomePage(){
+        return "click here <a href=\"http://localhost:8080/swagger-ui/index.html\">to swag it up!</a>";
     }
 
     @GetMapping("/addBilling/{patientId}")
